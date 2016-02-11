@@ -12,8 +12,17 @@ Vagrant.configure(2) do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "hashicorp/precise64"
 
+  config.vm.box = "fedora20"
+
+  config.vbguest.auto_update = false
+
+  config.vm.provision "file",
+     source: "/Volumes/Macintosh HD 3/vagrant_demo/vagrant_demo/vagrant/files/git-config",
+     destination: "~/.gitconfig"
+  
+  config.vm.provision "shell",
+     inline: "yum install -y git"
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
