@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 # Update CentOS with nay patches
 yum update -y --exclude=kernel
