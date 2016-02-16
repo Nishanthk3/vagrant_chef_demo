@@ -27,8 +27,7 @@ stop(){
 	[ $RETVAL -eq 0 ] && rm -f $LOCKFILE
 	return $RETVAL 
 }
-arg=$1
-case $arg in
+case "$1" in
 	start) start ;;
 	stop) stop ;;
 	restart) stop start ;;
