@@ -17,5 +17,5 @@ template "#{node['vagrant_tomcat']['tomcat_home']}/conf/tomcat-users.xml"
 service "tomcat7" do
 	service_name "tomcat7"
 	supports :restart => true, :status => true
-	action [:start, :enable]
+	action [:start]
 end

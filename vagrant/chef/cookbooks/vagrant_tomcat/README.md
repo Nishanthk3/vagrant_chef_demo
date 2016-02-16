@@ -1,4 +1,4 @@
 #Vagrant Tomcat
-#usage
+##Usage
 
 Include this cookbook, using the deafult recipe **vagrant_tomcat::default**
